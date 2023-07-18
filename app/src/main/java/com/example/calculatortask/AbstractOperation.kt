@@ -5,7 +5,7 @@ interface AbstractOperation {
 
     fun subtractOperation(a:Int, b:Int): Int
 
-    fun multiplyOperation(a:Int, b:Int): Int
+    fun multiplyOperation(a:Int, b:Int): Long
 
     fun divideOperation(a:Int, b:Int): Int
 }
