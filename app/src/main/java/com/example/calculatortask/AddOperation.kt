@@ -1,4 +1,5 @@
 package com.example.calculatortask
 
-interface AbstractOperation {
+class AddOperation : Calculator() {
+
 }
