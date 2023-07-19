@@ -4,26 +4,21 @@ import androidx.annotation.RequiresPermission
 
 fun main() {
     println("계산기를 실행합니다. 숫자를 입력해 주세요.")
-    var answer = readLine()!!
-    println("사칙연산을 선택해 주세요. [1] 더하기 [2] 빼기 [3] 곱하기 [4] 나누기")
+    var num1 = readLine()!!
+    println("사칙연산을 선택해 주세요. [+] 더하기 [-] 빼기 [*] 곱하기 [/] 나누기 [%]나머지")
     var cal = readLine()!!
-    when(cal){
-        "1" -> println("더하기")
-        "2" -> println("빼기")
-        "3" -> println("곱하기")
-        "4" -> println("나누기")
-        else -> println("잘못 선택했습니다.")
-    }
     println("숫자를 입력해 주세요.")
-    var b = readLine()!!
+    var num2 = readLine()!!
     var add = AddOperation()
     var sub = SubtractOperation()
     var mul = MultiplyOperation()
     var div = DivideOperation()
+    var rem = Calculator()
     when(cal){
-        "1" -> println( add.operation(answer.toInt(), b.toInt()))
-        "2" -> println( sub.operation(answer.toInt(), b.toInt()))
-        "3" -> println( mul.operation(answer.toInt(), b.toInt()))
-        "4" -> println( div.operation(answer.toInt(), b.toInt()))
+        "+" -> println( "${num1} ${cal} ${num2}는 ${add.operation(num1.toInt(), num2.toInt())}입니다.")
+        "-" -> println( "${num1} ${cal} ${num2}는 ${sub.operation(num1.toInt(), num2.toInt())}입니다.")
+        "*" -> println( "${num1} ${cal} ${num2}는 ${mul.operation(num1.toInt(), num2.toInt())}입니다.")
+        "/" -> println( "${num1} ${cal} ${num2}는 ${div.operation(num1.toInt(), num2.toInt())}입니다.")
+        "%" -> println( "${num1} ${cal} ${num2}는 ${rem.operation(num1.toInt(), num2.toInt())}입니다.")
     }
 }

@@ -1,7 +1,7 @@
 package com.example.calculatortask
 
 class SubtractOperation : Calculator() {
-    override fun operation(a: Int, b: Int): Int {
-        return a-b
+    override fun operation(num1: Int, num2: Int): Double {
+        return (num1 - num2).toDouble()
     }
 }
