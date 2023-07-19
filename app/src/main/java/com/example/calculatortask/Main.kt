@@ -19,6 +19,6 @@ fun main() {
         "-" -> println( "${num1} ${cal} ${num2}는 ${sub.operation(num1.toInt(), num2.toInt())}입니다.")
         "*" -> println( "${num1} ${cal} ${num2}는 ${mul.operation(num1.toInt(), num2.toInt())}입니다.")
         "/" -> println( "${num1} ${cal} ${num2}는 ${div.operation(num1.toInt(), num2.toInt())}입니다.")
-        "%" -> println( "${num1} ${cal} ${num2}는 ${rem.operation(num1.toInt(), num2.toInt())}입니다.")
+        "%" -> println( "${num1} ${cal} ${num2}는 ${rem.remainder(num1.toInt(), num2.toInt())}입니다.")
     }
 }
